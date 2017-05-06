@@ -15,7 +15,7 @@
 
 
 static GLKVector3 StrokeColor = { 0, 0, 0 };
-static float clearColor[4] = { 1, 1, 1, 0 };
+static float clearColor[4] = { 1, 1, 1, 1 };
 
 // Vertex structure containing 3D point and color
 struct PPSSignaturePoint
@@ -123,8 +123,6 @@ static PPSSignaturePoint ViewPointToGL(CGPoint viewPoint, CGRect bounds, GLKVect
 	if (context) {
 		
 		time(NULL);
-		
-		self.backgroundColor = [UIColor whiteColor];
 		self.opaque = NO;
 		
 		self.context = context;
@@ -186,7 +184,6 @@ static PPSSignaturePoint ViewPointToGL(CGPoint viewPoint, CGRect bounds, GLKVect
 
 - (void)drawRect:(CGRect)rect
 {
-	glClearColor(clearColor[0], clearColor[1], clearColor[2], clearColor[3]);
 	glClear(GL_COLOR_BUFFER_BIT);
 	
 	[effect prepareToDraw];

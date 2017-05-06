@@ -68,8 +68,8 @@ public class RSSignatureCaptureView extends View {
 		mPaint.setStrokeCap(Paint.Cap.ROUND);
 		mPaint.setStrokeJoin(Paint.Join.ROUND);
 
-		mMinWidth = convertDpToPx(8);
-		mMaxWidth = convertDpToPx(16);
+		mMinWidth = convertDpToPx(4);
+		mMaxWidth = convertDpToPx(6);
 		mVelocityFilterWeight = 0.4f;
 		mPaint.setColor(Color.BLACK);
 
@@ -78,8 +78,6 @@ public class RSSignatureCaptureView extends View {
 
 		clear();
 
-		// set the bg color as white
-		this.setBackgroundColor(Color.WHITE);
 
 		// width and height should cover the screen
 		this.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
