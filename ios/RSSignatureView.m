@@ -155,6 +155,7 @@
 	_loaded = true;
 	_border.path = [UIBezierPath bezierPathWithRect:self.bounds].CGPath;
 	_border.frame = self.bounds;
+	sign.frame = self.bounds;
 }
 
 - (void)setRotateClockwise:(BOOL)rotateClockwise {
